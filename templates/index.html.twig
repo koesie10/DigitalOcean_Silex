@@ -1,0 +1,14 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+    <h1>
+        Blog index
+    </h1>
+
+    {% for article in articles %}
+        <article>
+            <h1>{{ article.title }}</h1>
+            <p>{{ article.contents }}</p>
+            <p><small>On {{ article.date }} by {{ article.author }}</small></p>
+        </article>
+    {% endfor %}
+{% endblock %}
